@@ -1,0 +1,504 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet">
+    <link href="/dist/output.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.css" rel="stylesheet" /> -->
+
+</head>
+
+<body class="overflow-hidden">
+    <div class=" desktop-container h-screen max-h-full overflow-hidden  ">
+        <div class="h-full">
+            <div class="box bg-slate-400 flex justify-between py-3  px-6 sticky top-0 bottom-0 left-0 right-0 ">
+                <div class="logo">
+                    <img src="logo.png" alt=" Disply the image">
+
+                </div>
+                <!--  for button -->
+                <div class="flex  items-center gap-4 ">
+                    <div class=" ">
+                        <button class="bg-blue-400 font-bold text-yellow-50 p-2 px-5  transform hover:scale-105">
+                            Download
+                        </button>
+                    </div>
+                    <!-- <div class=" p-4"></div> -->
+                    <div class="">
+                        <a href="// " class="border-s border-black  py-5  p-2"> <span
+                                class="font-bold text-white ">X</span> Remove
+                            Frame</a>
+                    </div>
+                </div>
+
+
+
+
+            </div>
+
+            <!--  use Grid to make a layout -->
+
+            <div class="flex h-full   ">
+                <!-- Your content goes here -->
+                <div id="sidebar" class="lg:w-2/12  bg-navbar lg:h-full  absolute top-0 left-0 z-50  hidden lg:relative lg:z-0 h-full w-full
+                  ">
+                    <div class="   ">
+
+
+                        <div class="py-8 pl-6 text-white font-bold text-xl flex justify-between items-center">
+                            <div>
+
+                                <span class="text-gray text-2xl"><i class="fas fa-sun"></i></span>
+                                <span><a href="#">Easion</a></span>
+                            </div>
+                            <div>
+
+                                <span id="mark-x" class="pr-6 lg:hidden "><i class="fa-solid fa-xmark"></i></span>
+                            </div>
+                        </div>
+                        <!-- nav for side bar  -->
+                        <div>
+                            <ul class="text-white ">
+                                <li
+                                    class="py-3 flex justify-between items-center pl-6 pr-6 bg-navbar hover:bg-[#242f42]">
+                                    <div class="flex gap-3 text-lg">
+                                        <span>
+                                            <i class="fa-solid fa-house-chimney"></i>
+                                        </span>
+                                        <span class="text-lg"><a href="#">Dashboard</a></span>
+                                    </div>
+                                </li>
+                                <li id="chart"
+                                    class="py-3 flex justify-between items-center pl-6 pr-6 bg-navbar hover:bg-[#242f42]">
+                                    <div class="flex gap-3 text-lg ">
+                                        <span class="">
+                                            <i class="fa-sharp fa-solid fa-chart-column"></i>
+                                        </span>
+                                        <span><a href="#/">Chart</a></span>
+                                    </div>
+                                    <span id=chart-caret>
+                                        <i class="fa-solid fa-caret-left"></i>
+                                    </span>
+                                </li>
+                                <!--  drop down  -->
+                                <li>
+                                    <ul id="Chart-list" class="hidden">
+                                        <li
+                                            class="py-2 flex justify-between items-center pl-6 bg-navbar hover:bg-[#242f42]">
+                                            <div class=" text-lg ">
+                                                <span class="pl-8"><a href="#">Chart.js</a></span>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li id="Components"
+                                    class="py-3 flex justify-between items-center pl-6 pr-6 bg-navbar hover:bg-[#242f42]">
+                                    <div class="flex gap-3 text-lg ">
+                                        <span class="">
+                                            <i class="fas fa-cube"></i>
+                                        </span>
+                                        <span><a href="#">Components</a></span>
+                                    </div>
+                                    <span id="component-caret">
+                                        <i class="fa-solid fa-caret-left"></i>
+                                    </span>
+                                </li>
+                                <!-- Drop-down -->
+                                <li>
+                                    <ul id="component-list" class="hidden">
+                                        <li
+                                            class="py-2 flex justify-between items-center pl-6 bg-navbar hover:bg-[#242f42]">
+                                            <div class=" text-lg ">
+                                                <span class="pl-8"><a href="#">Cards</a></span>
+                                            </div>
+                                        </li>
+                                        <li
+                                            class="py-2 flex justify-between items-center pl-6 bg-navbar hover:bg-[#242f42]">
+                                            <div class=" text-lg ">
+                                                <span class="pl-8"><a href="#3">Forms</a></span>
+                                            </div>
+                                        </li>
+                                        <li id="icons"
+                                            class="py-2 flex justify-between items-center pl-6 pr-6 bg-navbar hover:bg-[#242f42]">
+                                            <div class=" text-lg ">
+                                                <span class="pl-8"><a href="#">icons</a></span>
+                                            </div>
+                                            <span id="icon-caret"><i class="fa-solid fa-caret-left"></i></span>
+                                        </li>
+                                        <!-- drop-down -->
+                                        <li>
+                                            <ul id="icon-list" class="hidden">
+                                                <li
+                                                    class="py-2 flex justify-between items-center pl-6 bg-navbar hover:bg-[#242f42]">
+                                                    <div class=" text-lg ">
+                                                        <span class="pl-12"><a href="###">Solids Icons</a></span>
+                                                    </div>
+                                                </li>
+                                                <li
+                                                    class="py-2 flex justify-between items-center pl-6 bg-navbar hover:bg-[#242f42]">
+                                                    <div class=" text-lg ">
+                                                        <span class="pl-12"><a href="####">Regular Icons</a></span>
+                                                    </div>
+                                                </li>
+                                                <li
+                                                    class="py-2 flex justify-between items-center pl-6 bg-navbar hover:bg-[#242f42]">
+                                                    <div class=" text-lg ">
+                                                        <span class="pl-12"><a href="#4">Brands Icons</a></span>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </li>
+
+                                        <li
+                                            class="py-2 flex justify-between items-center pl-6 bg-navbar hover:bg-[#242f42]">
+                                            <div class=" text-lg ">
+                                                <span class="pl-8"><a href="#">Stats</a></span>
+                                            </div>
+                                        </li>
+                                        <li
+                                            class="py-2 flex justify-between items-center pl-6 bg-navbar hover:bg-[#242f42]">
+                                            <div class=" text-lg ">
+                                                <span class="pl-8"><a href="#">Tabels</a></span>
+                                            </div>
+                                        </li>
+                                        <li
+                                            class="py-2 flex justify-between items-center pl-6 bg-navbar hover:bg-[#242f42]">
+                                            <div class=" text-lg ">
+                                                <span class="pl-8"><a href="#">Typography</a></span>
+                                            </div>
+                                        </li>
+                                        <li
+                                            class="py-2 flex justify-between items-center pl-6 bg-navbar hover:bg-[#242f42]">
+                                            <div class=" text-lg ">
+                                                <span class="pl-8"><a href="#">User Interface</a></span>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li id="layouts"
+                                    class="py-3 flex justify-between items-center pl-6 pr-6 bg-navbar hover:bg-[#242f42]">
+                                    <div class="flex gap-3 text-lg ">
+                                        <span class="">
+                                            <i class="fas fa-file"></i>
+                                        </span>
+                                        <span class="pl-2"><a href="#">Layouts</a></span>
+                                    </div>
+                                    <span id="layout_caret">
+                                        <i class="fa-solid fa-caret-left"></i>
+                                    </span>
+                                </li>
+                                <!--  drop-down  -->
+                                <li>
+                                    <ul id="layout" class=" hidden">
+                                        <li
+                                            class="py-2 flex justify-between items-center pl-6 bg-navbar hover:bg-[#242f42]">
+                                            <div class=" text-lg ">
+                                                <span class="pl-8"><a href="#">Blanks</a></span>
+                                            </div>
+                                        </li>
+                                        <li
+                                            class="py-2 flex justify-between items-center pl-6 bg-navbar hover:bg-[#242f42]">
+                                            <div class=" text-lg ">
+                                                <span class="pl-8"><a href="#">Contents</a></span>
+                                            </div>
+                                        </li>
+                                        <li
+                                            class="py-2 flex justify-between items-center pl-6 bg-navbar hover:bg-[#242f42]">
+                                            <div class=" text-lg ">
+                                                <span class="pl-8"><a href="##">Log in</a></span>
+                                            </div>
+                                        </li>
+                                        <li
+                                            class="py-2 flex justify-between items-center pl-6 bg-navbar hover:bg-[#242f42]">
+                                            <div class=" text-lg ">
+                                                <span class="pl-8"><a href="###">Sign up</a></span>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li id="About"
+                                    class="py-3 flex justify-between items-center pl-6 pr-6 bg-navbar hover:bg-[#242f42]">
+                                    <div class="flex gap-3 text-lg  ">
+                                        <span class="">
+                                            <i class="fas fa-info"></i>
+                                        </span>
+                                        <span class="pl-2"><a href="#">About</a></span>
+                                    </div>
+                                    <span id="About-caret">
+                                        <i class="fa-solid fa-caret-left "></i>
+                                    </span>
+                                </li>
+                                <!-- dropdown -->
+                                <li>
+                                    <ul class="hidden" id="About-list">
+                                        <li
+                                            class="py-2 flex justify-between items-center pl-6 bg-navbar hover:bg-[#242f42]">
+                                            <div class=" text-lg ">
+                                                <span class="pl-6"><a href="#">GitHub</a></span>
+                                            </div>
+                                        </li>
+                                        <li
+                                            class="py-2 flex justify-between items-center pl-6 bg-navbar hover:bg-[#242f42]">
+                                            <div class=" text-lg ">
+                                                <span class="pl-6"><a href="#">UseBootstrap</a></span>
+                                            </div>
+                                        </li>
+                                        <li
+                                            class="py-2 flex justify-between items-center pl-6 bg-navbar hover:bg-[#242f42]">
+                                            <div class=" text-lg ">
+                                                <span class="pl-6"><a href="#">Mudimedia Software</a></span>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex-grow   overflow-y-auto     ">
+                    <!-- Main section  -->
+                    <div class=" ">
+                        <nav class="  p-6 flex  justify-center    sm:justify-between items-center bg-main-bar  ">
+                            <div class="flex items-center  gap-3 sm:gap-6 text-icons ">
+
+                                <div id="hamburger">
+                                    <span class="text-2xl sm:pl-8"><i class="fa-solid fa-bars"></i></span>
+                                </div>
+                                <div class="pt-2 flex gap-2">
+                                    <span class="flex items-center">
+                                        <i class="fa-solid fa-magnifying-glass text-xl"></i>
+                                    </span>
+                                    <span class="">
+                                        <input class="p-1 bg-main-bar outline-none " type="text"
+                                            placeholder="type to Search ">
+                                    </span>
+                                </div>
+                            </div>
+                            <!--  for icons of nav -->
+                            <div>
+                                <ul class="flex gap-6 text-xl text-icons pr-3">
+                                    <li><i class="fa-brands fa-github"></i></li>
+                                    <li><i class="fa-solid fa-bell"></i></li>
+                                    <li><i class="fa-solid fa-user"></i></li>
+                                </ul>
+                            </div>
+
+                        </nav>
+                    </div>
+                    <!--  block columns grid -->
+                    <div class="sm:grid grid-cols-12 flex flex-col lg:flex-row bg-block4 gap-8 p-5 ">
+                        <div class="col lg:col-span-4 col-span-12   ">
+                            <div class=" bg-block1">
+                                <div class="p-6 ">
+                                    <div class="text-2xl font-medium text-white">
+                                        <h2 class="tracking-wider">
+                                            Sign ups
+                                        </h2>
+                                    </div>
+                                    <div class="pt-6  text-3xl flex justify-end ">
+                                        <p class=" text-white font-medium tracking-widest"> 114</p>
+                                    </div>
+                                    <!--  icons text div -->
+                                    <div class="flex justify-between">
+
+                                        <div class="">
+                                            <span> <i class="fa-solid fa-user text-xl text-white"></i></span>
+                                        </div>
+                                        <div class="text-white">
+                                            <span>
+                                                +25%
+                                            </span>
+                                            <span class="opacity-50">
+                                                from last month
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=" lg:col-span-4  col-span-12 ">
+                            <div class=" bg-block2">
+                                <div class="p-6 ">
+                                    <div class="text-2xl font-medium text-white">
+                                        <h2 class="tracking-wider">
+                                            Revenue
+                                        </h2>
+                                    </div>
+                                    <div class="pt-6  text-3xl flex justify-end ">
+                                        <p class=" text-white font-medium tracking-widest">$25,541</p>
+                                    </div>
+                                    <!--  icons text div -->
+                                    <div class="flex justify-between">
+
+                                        <div class="">
+                                            <span> <i class="fas fa-cart-arrow-down text-xl text-white"></i></span>
+                                        </div>
+                                        <div class="text-white">
+                                            <span>
+                                                +17.5%
+                                            </span>
+                                            <span class="opacity-50">
+                                                from last month
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lg:col-span-4 col-span-12   ">
+                            <div class=" bg-block3 h-full  ">
+                                <div class="p-6 flex flex-col justify-between h-full gap-[3.3rem] lg:gap-0">
+                                    <div class="text-2xl font-medium text-white">
+                                        <h2 class="tracking-wider">
+                                            Open tickets
+                                        </h2>
+                                    </div>
+
+                                    <!--  icons text div -->
+                                    <div class="flex justify-between  ">
+
+                                        <div class="">
+                                            <span> <i class="fas fa-phone text-2xl text-white"></i></span>
+                                        </div>
+                                        <div class="text-white text-3xl font-medium">
+                                            <p>5</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--  chart section -->
+
+                    <div class="grid grid-cols-12 pt-8  bg-block4 p-5 gap-8 pb-72">
+                        <div class="lg:col-span-6 col-span-12  ">
+
+                            <div class="relative border border-Chart-border gap-y-8  ">
+                                <div class="border border-Chart-border bg-chart-block ">
+                                    <ul class="flex justify-between text-chart-color p-2 px-6 items-center ">
+                                        <li class="flex gap-2 text-xl">
+                                            <span>
+                                                <i class="fa-sharp fa-solid fa-chart-column"></i>
+                                            </span>
+                                            <span class="font-bold  ">
+                                                Bar Chart
+                                            </span>
+                                        </li>
+                                        <li class="">
+
+                                            <div>
+
+                                                <div class=" h-full relative">
+                                                    <div
+                                                        class="border border-transparent  cursor-pointer inline-block rounded-md   px-4 py-2">
+                                                        <span id="icon"><i
+                                                                class="fa-solid fa-caret-right fa-rotate-90 bg-transparent "></i></span>
+
+
+                                                    </div>
+                                                    <!--  drop-down -->
+                                                    <div
+                                                        class=" absolute   bg-white z-10 right-0 w-56  transition-all duration-1000 ">
+                                                        <div class="  p-3 py-6 px-5 text-xl   z-10 hidden " id="list">
+                                                            <div class=" py-1  ">Action</div>
+                                                            <div class=" py-1"> Another Action</div>
+                                                            <div class=" py-1">Something else here</div>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="p-4 bg-white">
+
+                                    <div id="chartContainer" style="height: 250px; width: 100%;  "
+                                        class="overflow-x-scroll"></div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="lg:col-span-6 col-span-12  border border-Chart-border h-[14rem]">
+
+                            <div class=" border border-Chart-border bg-chart-block p-4 px-6 ">
+                                <div class="text-chart-color  text-lg font-bold flex gap-4 ">
+                                    <span><i class="fa-solid fa-bell"></i></span>
+                                    <span>Notification</span>
+
+                                </div>
+                            </div>
+                            <!--  comments -->
+                            <div class="bg-white">
+
+                                <div class="flex justify-between  py-2  px-6 text-comments text-lg">
+                                    <div class="flex gap-4 ">
+                                        <span><i class=" fas fa-inbox font-black  "></i></span>
+                                        <span class=" "> <a href="#">New comment</a></span>
+                                    </div>
+                                    <div class=" opacity-70">
+                                        <p>21 days ago</p>
+                                    </div>
+                                </div>
+                                <!-- second comment -->
+
+                                <div class="flex justify-between  py-2  px-6 text-comments text-lg">
+                                    <div class="flex gap-4 ">
+                                        <span><i class=" fas fa-inbox font-black  "></i></span>
+                                        <span class=" "> <a href="#">New comment</a></span>
+                                    </div>
+                                    <div class=" opacity-70">
+                                        <p>21 days ago</p>
+                                    </div>
+                                </div>
+                                <!-- third comment -->
+                                <div class="flex justify-between  py-2  px-6 text-comments text-lg">
+                                    <div class="flex gap-4 ">
+                                        <span><i class=" fas fa-inbox font-black  "></i></span>
+                                        <span class=" "> <a href="#">New comment</a></span>
+                                    </div>
+                                    <div class=" opacity-70">
+                                        <p>21 days ago</p>
+                                    </div>
+                                </div>
+
+                                <div class="  underline py-2  px-16 text-comments text-lg">
+
+                                    <a chref="##">show all</a>
+                                </div>
+
+
+                            </div>
+
+
+
+
+
+
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+            </div>
+        </div>
+
+    </div>
+
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.js"></script> -->
+
+
+    <script src="https://cdn.canvasjs.com/canvasjs.min.js"> </script>
+    <script src="./script.js"></script>
+</body>
+
+</html>
